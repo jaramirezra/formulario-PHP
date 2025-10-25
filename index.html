@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario de Datos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body>
+    <section class="s-content mt-5 mb-5">
+      <div class="container-fluid">
+        <form class="needs-validation" id="formulario" method="POST" novalidate>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Ingrese Nombre y Apellidos" required />
+            <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Ingrese su correo electrónico" required />
+            <div class="invalid-feedback">
+              Por favor, ingrese un correo válido.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <label class="form-label d-block">Confirmación de asistencia</label>
+              
+              <select class="form-select" aria-label="Seleccione una opción" id="confirmation" required>
+                <option value="1" selected>Si</option>
+                <option value="0">No</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-outline-success">
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="asset/js/main.js"></script>
+    <script src="controller/save.js"></script>
+  </body>
+</html>
